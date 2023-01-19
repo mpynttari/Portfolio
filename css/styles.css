@@ -1,10 +1,27 @@
 
 :root {
-    --main-bg-colour: hsl(0, 0%, 97%);
-    --main-accent-colour: #90ee90;
+    /* --body-colour: rgb(173, 226, 230); */
+    --navbar-accent-colour: #90ee90;
     --navbar-bg-colour: #333;
     --navbar-text-colour: #f2f2f2;
 
+    /* https://colorhunt.co/palette/1fab8962d2a29df3c4d7fbe8 */
+    --body-colour: #D7FBE8;
+    --about-colour: #9DF3C4;
+    --projects-colour: #62D2A2;
+    --contact-colour: #1FAB89;
+
+    /* https://colorhunt.co/palette/344d676eccafade792f3ecb0 */
+    /* --body-colour: #344D67;
+    --about-colour: #6ECCAF;
+    --projects-colour: #ADE792;
+    --contact-colour: #F3ECB0; */
+
+    /* https://colorhunt.co/palette/defbc290d26d459d72342b2b */
+    /* --body-colour: #DEFBC2;
+    --about-colour: #90D26D;
+    --projects-colour: #459D72;
+    --contact-colour: #1FAB89; */
 }
 
 html {
@@ -16,10 +33,9 @@ body {
     margin: 0;
     font-family: monospace;
 
-    /* background-color: var(--main-bg-colour); */
-    background-color: rgb(173, 226, 230);
+    /* background-color: rgb(173, 226, 230); */
+    background-color: var(--body-colour);
 }
-
 
 
 /* NAVBAR */
@@ -28,7 +44,6 @@ body {
     background-color: var(--navbar-bg-colour);
     overflow: hidden;
     margin: auto;
-    /* margin-top: 0.5px; */
     width: 100%;
     position: fixed;
     top: 0px;
@@ -51,7 +66,7 @@ body {
 }
 
 .navbar a:hover {
-    background-color: var(--main-accent-colour);
+    background-color: var(--about-colour);
     color: black
 }
 
@@ -72,9 +87,6 @@ body {
 .hero {
     display: grid;
     grid-template-columns: 1fr 2fr;
-
-    /* border: 4px solid lightgrey; */
-
     border-radius: 10px;
     
     margin-top: 5rem; 
@@ -83,31 +95,15 @@ body {
 }
 
 .hero-bg-image{
-    /* background-color: lightcyan; */
     background-image: url("../images/cluster.png");
     background-size: auto;
     background-repeat: no-repeat;
 
-    /* outline: 2px solid red; */
-    
-
     padding-top: 10rem;
     padding-bottom: 22rem;
-
-    /* box-shadow: 0 0 15px 15px rgb(173, 226, 230) inset; */
-    
-    /* box-shadow: 10px 5px 5px rgb(173, 226, 230); */
-
-
-    /* padding-top: 140px;
-    padding-bottom: 140px; */
-
 }
 
 .hero-container {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     display: grid;
     place-content: center;
     text-align: center;
@@ -116,21 +112,14 @@ body {
 
     height: 27em;
     transform: translateY(12px);
-    /* transform: translateX(1em); */
 
-    /* outline: 1px dotted black; */
     box-shadow: 2px 1px 2px gray;
 }
 
 .hero-text {
     font-size: 54px;
-    /* padding-top: 2.5em; */
     position: relative;
-
-    /* outline: 2px solid red; */
     width: max-content;
-    
-    
 }
 
 .hero-text::before {
@@ -141,29 +130,24 @@ body {
     bottom: 0;
     left: 0;
 
-    /* background: var(--main-bg-colour); */
     background-color: lightcyan;
     animation: write 2.5s steps(14) 1s forwards;
 }
 
 .hero-subtext {
-    /* outline: 2px solid orangered; */
     font-size: 24px;
     opacity: 0;
     animation: fade-in 3.5s ease 4s forwards;
 }
 
-
-
 .main-container {
     max-width: 1500px;
-
     margin-left: 5rem;
     margin-right: 5rem;
 }
 
 .about {
-    background-color: aquamarine;
+    background-color: var(--about-colour);
     padding: 1em;
 }
 
@@ -176,7 +160,7 @@ body {
 }
 
 .projects {
-    background-color: rgb(140, 175, 206);
+    background-color: var(--projects-colour);
     padding: 1em;
 }
 
@@ -184,8 +168,6 @@ body {
 .about > p, .projects > p, .contact > p {
     font-size: 20px;
 }
-
-
 
 /* Removing the colour and text decoration from visiting links */
 .coursework-github, .coursework-github:visited, .coursework-github:active {
@@ -216,14 +198,12 @@ li {
 /* CONTACT */
 
 .contact {
-    background-color: lightskyblue;
+    background-color: var(--contact-colour);
     padding: 1em;
 }
 
 .about, .projects, .contact {
     margin-top: 4em;
-
-    /* outline: 1px solid black; */
     box-shadow: 6px 5px 4px gray;
 }
 
@@ -234,11 +214,9 @@ li {
     align-items: center;
 
     outline: 2px solid black;
-
 }
 
 .contact-box > * {
-    /* outline: 1px dotted red; */
     outline: 1px solid black;
     margin: 0;
 }
@@ -248,13 +226,12 @@ li {
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 5px;
-    
 }
+
 
 /* FOOTER */
 
 footer {
-    /* background-color: lightcyan; */
     background-color: var(--navbar-bg-colour);
     color: var(--navbar-text-colour);
     display: flex;
@@ -265,7 +242,6 @@ footer {
     margin-top: 4em;
     padding: 0.75em;
 }
-
 
 
 /* KEYFRAMES */
