@@ -1,0 +1,280 @@
+
+:root {
+    --main-bg-colour: hsl(0, 0%, 97%);
+    --main-accent-colour: #90ee90;
+    --navbar-bg-colour: #333;
+    --navbar-text-colour: #f2f2f2;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 18px;
+    margin: 0;
+    font-family: monospace;
+
+    /* background-color: var(--main-bg-colour); */
+    background-color: rgb(173, 226, 230);
+}
+
+
+
+/* NAVBAR */
+
+.navbar {
+    background-color: var(--navbar-bg-colour);
+    overflow: hidden;
+    margin: auto;
+    /* margin-top: 0.5px; */
+    width: 100%;
+    position: fixed;
+    top: 0px;
+
+    z-index: 1;
+}
+
+.spacing {
+    visibility: hidden;
+}
+
+.navbar a {
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    padding: 0.5em;
+    font-weight: 400;
+    color: var(--navbar-text-colour);
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: var(--main-accent-colour);
+    color: black
+}
+
+.header-github, .header-linkedin {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.fa-github, .fa-linkedin {
+    padding: 8px;
+}
+
+
+
+/* HERO */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    /* border: 4px solid lightgrey; */
+
+    border-radius: 10px;
+    
+    margin-top: 5rem; 
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.hero-bg-image{
+    /* background-color: lightcyan; */
+    background-image: url("../images/cluster.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+
+    /* outline: 2px solid red; */
+    
+
+    padding-top: 10rem;
+    padding-bottom: 22rem;
+
+    /* box-shadow: 0 0 15px 15px rgb(173, 226, 230) inset; */
+    
+    /* box-shadow: 10px 5px 5px rgb(173, 226, 230); */
+
+
+    /* padding-top: 140px;
+    padding-bottom: 140px; */
+
+}
+
+.hero-container {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    display: grid;
+    place-content: center;
+    text-align: center;
+
+    background-color: lightcyan;
+
+    height: 27em;
+    transform: translateY(12px);
+    /* transform: translateX(1em); */
+
+    /* outline: 1px dotted black; */
+    box-shadow: 2px 1px 2px gray;
+}
+
+.hero-text {
+    font-size: 54px;
+    /* padding-top: 2.5em; */
+    position: relative;
+
+    /* outline: 2px solid red; */
+    width: max-content;
+    
+    
+}
+
+.hero-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /* background: var(--main-bg-colour); */
+    background-color: lightcyan;
+    animation: write 2.5s steps(14) 1s forwards;
+}
+
+.hero-subtext {
+    /* outline: 2px solid orangered; */
+    font-size: 24px;
+    opacity: 0;
+    animation: fade-in 3.5s ease 4s forwards;
+}
+
+
+
+.main-container {
+    max-width: 1500px;
+
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.about {
+    background-color: aquamarine;
+    padding: 1em;
+}
+
+.about-header, .projects-header, .contact-header {
+    font-size: 30px;
+}
+
+.hero-container, .about, .projects, .contact {
+    border-radius: 0.25em;
+}
+
+.projects {
+    background-color: rgb(140, 175, 206);
+    padding: 1em;
+}
+
+
+.about > p, .projects > p, .contact > p {
+    font-size: 20px;
+}
+
+
+
+/* Removing the colour and text decoration from visiting links */
+.coursework-github, .coursework-github:visited, .coursework-github:active {
+    color: inherit;
+}
+
+.contact-box > a, .contact-box > a:visited, .contact-box > a:active {
+    color:inherit;
+}
+
+.coursework-github {
+    text-decoration: none;
+}
+
+
+
+.ulist {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+li {
+    font-size: 18px;
+}
+
+
+
+/* CONTACT */
+
+.contact {
+    background-color: lightskyblue;
+    padding: 1em;
+}
+
+.about, .projects, .contact {
+    margin-top: 4em;
+
+    /* outline: 1px solid black; */
+    box-shadow: 6px 5px 4px gray;
+}
+
+.contact-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+
+    outline: 2px solid black;
+
+}
+
+.contact-box > * {
+    /* outline: 1px dotted red; */
+    outline: 1px solid black;
+    margin: 0;
+}
+
+.contact-box > p {
+    outline: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    
+}
+
+/* FOOTER */
+
+footer {
+    /* background-color: lightcyan; */
+    background-color: var(--navbar-bg-colour);
+    color: var(--navbar-text-colour);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 16px;
+    margin-top: 4em;
+    padding: 0.75em;
+}
+
+
+
+/* KEYFRAMES */
+
+@keyframes write {
+    to { left: 100%; }
+}
+
+@keyframes fade-in {
+    to { opacity: 1; }
+}
+
