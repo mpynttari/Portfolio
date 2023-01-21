@@ -108,7 +108,8 @@ body {
     place-content: center;
     text-align: center;
 
-    background-color: lightcyan;
+    /* background-color: lightcyan; */
+    background-color: white;
 
     height: 27em;
     transform: translateY(12px);
@@ -130,7 +131,8 @@ body {
     bottom: 0;
     left: 0;
 
-    background-color: lightcyan;
+    /* background-color: lightcyan; */
+    background-color: white;
     animation: write 2.5s steps(14) 1s forwards;
 }
 
@@ -141,9 +143,9 @@ body {
 }
 
 .main-container {
-    max-width: 1500px;
-    margin-left: 5rem;
-    margin-right: 5rem;
+    max-width: 1700px;
+    margin: auto;
+    display: grid;
 }
 
 .about {
@@ -180,9 +182,18 @@ body {
 
 .coursework-github {
     text-decoration: none;
+    padding-right: 0.5em;
 }
 
+.text-link {
+    text-decoration: none;
+    color: var(--body-colour)
+}
 
+.text-link:hover {
+    background-color: var(--body-colour);
+    color: black;
+}
 
 .ulist {
     display: grid;
